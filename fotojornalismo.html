@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotojornalismo</title>
+    <link rel="stylesheet" href="fotojornalismo.css">
+</head>
+<body>
+
+    <a href="index.html" class="btn-return">◄ Voltar ao Início</a>
+
+    <main class="content-wrapper">
+        <h1 class="page-title">Fotojornalismo</h1>
+        <button id="triggerModal" class="btn-action">Revelar Informações</button>
+    </main>
+
+    <div id="sideModal" class="side-panel">
+        <button id="closePanel" class="btn-close">&#10005;</button>
+        <div class="panel-content">
+            <h2>O que é Fotojornalismo?</h2>
+            
+            <p>O fotojornalismo é uma vertente da fotografia focada na narração de histórias documentais e na reportagem de notícias. Seu principal compromisso é com a verdade, exigindo do profissional ética e ausência de manipulações para relatar fatos reais e o impacto humano na sociedade.</p>
+            
+            <h3>Principais Tipos</h3>
+            <div class="category-grid">
+                <div class="cat-item">
+                    <h4>Hard News</h4>
+                    <p>Cobertura de eventos factuais e inesperados de grande urgência, como conflitos, desastres naturais e protestos.</p>
+                </div>
+                <div class="cat-item">
+                    <h4>Feature</h4>
+                    <p>Reportagens mais aprofundadas e atemporais, focadas em questões sociais, culturais ou no cotidiano de uma comunidade.</p>
+                </div>
+                <div class="cat-item">
+                    <h4>Retrato Editorial</h4>
+                    <p>Imagens de pessoas envolvidas em notícias, focando em suas emoções e no contexto da história que representam.</p>
+                </div>
+                <div class="cat-item">
+                    <h4>Fotojornalismo Esportivo</h4>
+                    <p>Captura da ação, do clímax e das emoções intensas presentes em competições e eventos esportivos de qualquer magnitude.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panelOverlay" class="panel-overlay"></div>
+
+    <script>
+        const modal = document.getElementById('sideModal');
+        const overlay = document.getElementById('panelOverlay');
+        const openBtn = document.getElementById('triggerModal');
+        const closeBtn = document.getElementById('closePanel');
+
+        openBtn.addEventListener('click', function() {
+            modal.classList.add('active');
+            overlay.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', function() {
+            modal.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        overlay.addEventListener('click', function() {
+            modal.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
