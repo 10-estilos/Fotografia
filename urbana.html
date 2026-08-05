@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografia Urbana</title>
+    <link rel="stylesheet" href="urbana.css">
+</head>
+<body>
+
+    
+    <img src="urbana.avif" alt="" class="bg-image-html">
+
+  
+    <a href="index.html" class="btn-return">◄ Voltar ao Início</a>
+
+    <button id="openModalBtn">Explorar Fotografia Urbana</button>
+
+    <div id="urbanModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Fotografia Urbana</h2>
+            <p class="subtitle">A alma das cidades em um relance.</p>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80" alt="Fotografia Urbana">
+                <p>A fotografia urbana captura a essência da vida nas metrópoles, o contraste entre a arquitetura imponente e os momentos espontâneos do cotidiano. É a arte de transformar o caos e a rotina da cidade em narrativas visuais marcantes através de sombras, reflexos e composições geométricas.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("urbanModal");
+        const btn = document.getElementById("openModalBtn");
+        const closeBtn = document.querySelector(".close-btn");
+
+        btn.onclick = () => modal.style.display = "flex";
+        closeBtn.onclick = () => modal.style.display = "none";
+        window.onclick = (e) => {
+            if (e.target === modal) modal.style.display = "none";
+        };
+    </script>
+</body>
+</html>
