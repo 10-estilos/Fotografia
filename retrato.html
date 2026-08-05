@@ -1,41 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal - Retrato Fotografico</title>
+    <title>Fotografia de retrato</title>
+    <link rel="stylesheet" href="retrato.css">
 </head>
+
 <body>
-    <button id="btnAbrirModal" class="btn-abrir">
-    Ver Retrato Fotográfico
-    </button>
 
-    <div id="meuModal" class="modal-overlay">
-<div class="modal-content retrato">
-    <span id="btnFecharModal" class="fechar-modal">&times;</span>
+    <button id="openModalBtn" class="btn">Explorar Fotografia de Paisagem</button>
 
-<div class="modal-header">
-    <h2>Retratos que Contam Histórias</h2>
-</div>
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close-btn">&times;</span>
 
-<div class="modal-body">
-
-    <img src="" alt="Retrato artistico de uma pessoa">
-
-    <div class="texto">
-        <p>
-            A fotografia de retrato transforma momentos comuns em registros únicos.
-            Cada olhar, expressão e detalhe transmite uma história própria, criando uma conexão entre o fotógrafo e o fotografado. 
-        </p>
-
-        <p>
-            <strong>Segredo do fotógrafo</strong>
-            O uso correto da iluminação, do enquadramento e da composição ajuda a revelar emoções e criar imagens marcantes.
-        </p>
+            <h2>Fotografia retratp</h2>
+            <p>Fotografia retrato nasceu no século XIX como uma evolução da pintura de retratos, permitindo registrar a
+                identidade, a memória e a posição social das pessoas de forma acessível.</p>
+            <p>
+                <strong>Tradicional:</strong> Foco no rosto e nos ombros com o olhar direcionado para a câmera.
+                <strong>Espontâneo:</strong> Captura a pessoa de forma natural, sem poses rígidas.
+                <strong>Ambiental:</strong> Mostra o indivíduo em um local familiar ou importante para a história dele.
+            </p>
+            <h3>Dicas de composição e foco:</h3>
+            <ul>
+                <li><strong>Foco nos olhos:</strong>Mantenha sempre o ponto de foco nítido nos olhos do modelo.</li>
+                <li><strong>Escolha do fundo</strong> Um fundo limpo ou que complemente a cor da roupa evita distrações
+                    e valoriza o retrato.</li>
+                <li><strong>Conexão:</strong>Busque interagir com a pessoa fotografada para capturar expressões
+                    autênticas e naturais.</li>
+            </ul>
+        </div>
     </div>
-  </div>
- </div>
-</div>
-<script src="../Fotografia/retrato.js"></script>
+
+    <a href="index.html" class="btn-home">Voltar ao Ínicio</a>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const openBtn = document.getElementById('openModalBtn');
+        const closeBtn = document.getElementById('closeModalBtn');
+
+        openBtn.onclick = function () {
+            modal.style.display = 'flex';
+        }
+
+        closeBtn.onclick = function () {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
+
 </html>
