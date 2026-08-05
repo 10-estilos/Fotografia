@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografia Macro</title>
+    <link rel="stylesheet" href="macrofotografia.css">
+</head>
+<body>
+
+    <img src="https://images.unsplash.com/photo-1533036666874-129eb0b2f913?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fundo Macrofotografia" class="bg-image-html">
+
+  
+    <a href="index.html" class="btn-return">◄ Voltar ao Início</a>
+
+    <main class="hero-section">
+        <h1 class="title">Macrofotografia</h1>
+        <button id="focusBtn" class="btn-focus">Descobrir Detalhes</button>
+    </main>
+
+    <div id="bottomSheet" class="bottom-sheet">
+        <div class="sheet-header">
+            <div class="drag-indicator"></div>
+            <button id="closeSheet" class="btn-close-sheet">&times;</button>
+        </div>
+        
+        <div class="sheet-content">
+            <h2>O Universo Invisível da Macrofotografia</h2>
+            
+            <p>A macrofotografia é a técnica de capturar imagens de assuntos muito pequenos em tamanho natural ou maior. Este estilo revela detalhes minuciosos e texturas que são praticamente invisíveis a olho nu, transportando o espectador para um mundo microscópico fascinante.</p>
+            
+            <p>Fotógrafos deste gênero utilizam lentes macro dedicadas, tubos de extensão e técnicas avançadas como o empilhamento de foco (focus stacking) para contornar a profundidade de campo extremamente rasa característica dessa modalidade.</p>
+            
+            <div class="cards-container">
+                <div class="info-card">
+                    <h3>Natureza e Insetos</h3>
+                    <p>O foco principal está em revelar os olhos compostos, asas, pelos e a estrutura complexa de pequenos animais e insetos.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Flora e Botânica</h3>
+                    <p>Captura a anatomia das flores, grãos de pólen, gotas de orvalho nas pétalas e as texturas das folhas.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Abstrato</h3>
+                    <p>Utiliza padrões próximos de texturas, fluidos ou luzes que perdem sua forma original, criando imagens puramente artísticas.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Produtos e Joias</h3>
+                    <p>Muito utilizado na publicidade para mostrar os detalhes precisos do artesanato em relógios, anéis e pedras preciosas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sheetOverlay" class="sheet-overlay"></div>
+
+    <script>
+        const sheet = document.getElementById('bottomSheet');
+        const overlay = document.getElementById('sheetOverlay');
+        const openBtn = document.getElementById('focusBtn');
+        const closeBtn = document.getElementById('closeSheet');
+
+        openBtn.addEventListener('click', () => {
+            sheet.classList.add('open');
+            overlay.classList.add('open');
+        });
+
+        const closeAll = () => {
+            sheet.classList.remove('open');
+            overlay.classList.remove('open');
+        };
+
+        closeBtn.addEventListener('click', closeAll);
+        overlay.addEventListener('click', closeAll);
+    </script>
+</body>
+</html>

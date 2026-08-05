@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografia de Moda</title>
+    <link rel="stylesheet" href="moda.css">
+</head>
+<body>
+
+    <a href="index.html" class="btn-return">◄ Voltar ao Início</a>
+
+    <button id="openModalBtn">Ver Editorial de Moda</button>
+
+    <div id="fashionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Editorial de Moda</h2>
+            <p class="subtitle">A arte de capturar conceitos, luz e estilo.</p>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Fotografia de Moda">
+                <p>A fotografia de moda vai além da simples exibição de vestuário. Ela constrói narrativas visuais marcantes, expressando identidade, cultura e comportamento através da direção de cena, iluminação e composição analógica ou digital.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("fashionModal");
+        const btn = document.getElementById("openModalBtn");
+        const closeBtn = document.querySelector(".close-btn");
+
+        btn.onclick = () => modal.style.display = "flex";
+        closeBtn.onclick = () => modal.style.display = "none";
+        window.onclick = (e) => {
+            if (e.target === modal) modal.style.display = "none";
+        };
+    </script>
+</body>
+</html>
