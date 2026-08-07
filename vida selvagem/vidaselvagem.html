@@ -7,15 +7,17 @@
     <title>Vida Selvagem & Natureza</title>
     <link rel="stylesheet" href="vidaselvagem.css">
 </head>
+
 <body>
+    <a href="index.html" class="btn-home">← Voltar para o ínicio</a>
     <div class="card-selvagem">
         <div class="card-header"> <span>Estilo #08</span>
             <h2>🦁 Vida Selvagem & Natureza</h2>
         </div>
         <div class="foto-box"> <img
-                src="https://t4.ftcdn.net/jpg/16/27/15/31/360_F_1627153131_FuzYgRDqWjHIzWIaG5m1b5154IeiJ3xc.jpg"
+                src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=800&q=80"
                 alt="Leão na Savana">
-            <div class="tag-foto" id="badgeFiltro">Filtro: Warm Safari</div>
+            <div class="tag-foto">Filtro: Warm Safari</div>
         </div>
         <p class="descricao"> Registra animais e ecossistemas em seus habitats naturais. Exige paciência, camuflagem e
             lentes de longo alcance (teleobjetivas). </p>
@@ -29,9 +31,10 @@
         </div>
         <button class="btn-detalhes" id="btnToggle">Ver Dicas de Equipamento</button>
     </div>
-    <script>    
-    const btnToggle = document.getElementById('btnToggle'); const fichaTecnica = document.getElementById('fichaTecnica');
-    btnToggle.addEventListener('click', () => {      if (fichaTecnica.style.display === 'block') {        fichaTecnica.style.display = 'none';        btnToggle.innerText = 'Ver Dicas de Equipamento';      } else {        fichaTecnica.style.display = 'block';        btnToggle.innerText = 'Ocultar Dicas';      }    });  </script>
+    <script>
+        const btnToggle = document.getElementById('btnToggle'); const fichaTecnica = document.getElementById('fichaTecnica');
+        btnToggle.addEventListener('click', () => { if (fichaTecnica.style.display === 'block') { fichaTecnica.style.display = 'none'; btnToggle.innerText = 'Ver Dicas de Equipamento'; } else { fichaTecnica.style.display = 'block'; btnToggle.innerText = 'Ocultar Dicas'; } });
+    </script>
 </body>
 
 </html>
