@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Selvagem & Natureza</title>
+    <link rel="stylesheet" href="vidaselvagem.css">
+</head>
+<body>
+    <div class="card-selvagem">
+        <div class="card-header"> <span>Estilo #08</span>
+            <h2>🦁 Vida Selvagem & Natureza</h2>
+        </div>
+        <div class="foto-box"> <img
+                src="https://t4.ftcdn.net/jpg/16/27/15/31/360_F_1627153131_FuzYgRDqWjHIzWIaG5m1b5154IeiJ3xc.jpg"
+                alt="Leão na Savana">
+            <div class="tag-foto" id="badgeFiltro">Filtro: Warm Safari</div>
+        </div>
+        <p class="descricao"> Registra animais e ecossistemas em seus habitats naturais. Exige paciência, camuflagem e
+            lentes de longo alcance (teleobjetivas). </p>
+        <div class="ficha-tecnica" id="fichaTecnica">
+            <p><strong>📋 Ficha de Campo:</strong></p>
+            <ul>
+                <li>• <strong>Lente:</strong> Teleobjetiva 400mm ou 600mm</li>
+                <li>• <strong>Técnica:</strong> Foco contínuo no olho do animal</li>
+                <li>• <strong>Velocidade:</strong> Disparo rápido (1/2000s)</li>
+            </ul>
+        </div>
+        <button class="btn-detalhes" id="btnToggle">Ver Dicas de Equipamento</button>
+    </div>
+    <script>    
+    const btnToggle = document.getElementById('btnToggle'); const fichaTecnica = document.getElementById('fichaTecnica');
+    btnToggle.addEventListener('click', () => {      if (fichaTecnica.style.display === 'block') {        fichaTecnica.style.display = 'none';        btnToggle.innerText = 'Ver Dicas de Equipamento';      } else {        fichaTecnica.style.display = 'block';        btnToggle.innerText = 'Ocultar Dicas';      }    });  </script>
+</body>
+
+</html>
