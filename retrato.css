@@ -5,34 +5,85 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('https://aprendacompaulo.com/wp-content/uploads/2021/01/brooke-cagle-kdevrys0E9s-unsplash-scaled.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.bg-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.main-content {
+    z-index: 1;
+    text-align: center;
 }
 
 .btn {
-    padding: 18px 32px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 2px solid #ffffff;
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #111111;
+    border: none;
+    padding: 16px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
     cursor: pointer;
-    backdrop-filter: blur(4px);
     transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .btn:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-    color: #000000;
-    transform: scale(1.05);
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+}
+
+.btn-home {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 10px 22px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.btn-home:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
 }
 
 .modal-overlay {
@@ -42,92 +93,93 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    z-index: 100;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(6px);
+    padding: 20px;
 }
 
 .modal-content {
-    background-color: #ffffff;
-    color: #333333;
-    padding: 40px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 650px;
+    background: #18181c;
+    color: #e0e0e0;
+    padding: 36px;
+    border-radius: 16px;
+    max-width: 580px;
+    width: 100%;
     position: relative;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-    animation: modalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
 .close-btn {
     position: absolute;
-    top: 15px;
+    top: 16px;
     right: 20px;
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: 300;
     color: #888888;
     cursor: pointer;
     transition: color 0.2s ease;
+    line-height: 1;
 }
 
 .close-btn:hover {
-    color: #e74c3c;
+    color: #ffffff;
 }
 
 .modal-content h2 {
-    margin-bottom: 20px;
-    color: #2c3e50;
-    font-size: 2rem;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-}
-
-.modal-content p {
-    line-height: 1.7;
+    font-size: 1.75rem;
     margin-bottom: 16px;
-    font-size: 1.05rem;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .modal-content h3 {
-    margin-top: 25px;
-    margin-bottom: 15px;
-    color: #debb4b;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.modal-content p {
+    line-height: 1.6;
+    margin-bottom: 14px;
+    color: #cccccc;
+    font-size: 0.98rem;
+}
+
+.styles-info p {
+    margin-bottom: 8px;
+}
+
+.styles-info strong,
+.modal-content ul strong {
+    color: #ffffff;
 }
 
 .modal-content ul {
-    list-style-type: none;
-    padding-left: 0;
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
-.modal-content ul li {
-    background-color: #f8f9fa;
+.modal-content li {
     margin-bottom: 10px;
-    padding: 12px 15px;
-    border-left: 4px solid #db3434;
-    border-radius: 4px;
     line-height: 1.5;
-}
-
-.modal-content ul li strong {
-    color: #2c3e50;
-}
-
-.btn-home {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #c45e11;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-family: Arial, sans-serif;
-    transition: 0.3s;
-}
-
-.btn-home:hover {
-    background-color: #555;
+    color: #cccccc;
+    font-size: 0.95rem;
 }
