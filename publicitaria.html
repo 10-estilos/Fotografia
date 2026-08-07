@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografia Publicitária</title>
+    <link rel="stylesheet" href="publicitaria.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1920&q=80" alt="Fotografia Publicitária" class="bg-image-html">
+    <div class="overlay"></div>
+
+    <a href="index.html" class="btn-return">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Início
+    </a>
+
+    <main class="hero-container">
+        <h1>Fotografia Publicitária</h1>
+        <p>A fusão perfeita entre persuasão visual, iluminação de estúdio e construção de marcas de alto padrão.</p>
+        <button id="openModalBtn">Descobrir o Estilo</button>
+    </main>
+
+    <div id="pubModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <span class="category-tag">Publicidade & Moda</span>
+            <h2>Fotografia Publicitária</h2>
+            <div class="divider"></div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Campanha Publicitária">
+                <p>A fotografia publicitária é focada na criação de narrativas visuais persuasivas para marcas e campanhas de moda. Ela combina técnicas apuradas de iluminação de estúdio, direção de arte rigorosa e pós-produção avançada para transmitir conceitos de desejo, elegância e posicionamento de mercado.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("pubModal");
+        const btn = document.getElementById("openModalBtn");
+        const closeBtn = document.querySelector(".close-btn");
+
+        btn.onclick = () => modal.classList.add("active");
+        closeBtn.onclick = () => modal.classList.remove("active");
+        window.onclick = (e) => {
+            if (e.target === modal) modal.classList.remove("active");
+        };
+    </script>
+</body>
+</html>
